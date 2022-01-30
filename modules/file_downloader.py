@@ -24,4 +24,5 @@ command = 'aws s3 --no-sign-request --only-show-errors cp s3://open-images-datas
 
 commands = [command for i in range(20)]
 
-list(tqdm(pool.imap(os.system, commands), total = len(commands) ))
+list(tqdm(pool.imap(os.system, commands), total = len(commands)))
+
